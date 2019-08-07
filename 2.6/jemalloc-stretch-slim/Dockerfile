@@ -12,10 +12,10 @@ RUN apt-get update -q \
 
 ENV GEM_HOME /usr/local/bundle
 ENV BUNDLE_PATH="$GEM_HOME" \
-	BUNDLE_SILENCE_ROOT_WARNING=1 \
-	BUNDLE_APP_CONFIG="$GEM_HOME" \
-	RUBY_VERSION=$RUBY_VERSION \
-	LANG=C.UTF-8 LC_ALL=C.UTF-8
+    BUNDLE_SILENCE_ROOT_WARNING=1 \
+    BUNDLE_APP_CONFIG="$GEM_HOME" \
+    RUBY_VERSION=$RUBY_VERSION \
+    LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # path recommendation: https://github.com/bundler/bundler/pull/6469#issuecomment-383235438
 ENV PATH $GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH
