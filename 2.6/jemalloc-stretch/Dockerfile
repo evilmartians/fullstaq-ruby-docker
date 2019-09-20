@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-ARG RUBY_VERSION=2.6.3-jemalloc
+ARG RUBY_VERSION=2.6.4-jemalloc
 
 RUN apt-get update -q \
     && apt-get dist-upgrade --assume-yes \
