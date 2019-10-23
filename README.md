@@ -11,20 +11,20 @@ These images are intended to be used while [Fullstaq] and [Hongli Lai] haven't b
 
 ## Flavors
 
-Currently only 2.6.3 and 2.6.4 with jemalloc are available.
+Currently only 2.6.3, 2.6.4 and 2.6.5 with jemalloc are available.
 
 ## Usage
 
 Pull it directly from the quay.io registry:
 
 ```sh
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.4-jemalloc-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-stretch-slim
 ```
 
 Or use as base image in your `Dockerfile`:
 
 ```docker
-ARG RUBY_VERSION=2.6.4-jemalloc
+ARG RUBY_VERSION=2.6.5-jemalloc
 
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-stretch-slim
 ```
