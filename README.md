@@ -9,16 +9,12 @@ These images are intended to be used while [Fullstaq] and [Hongli Lai] haven't b
 <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54">
 </a>
 
-## Flavors
-
-Currently only 2.6.3, 2.6.4 2.6.5 and 2.7.0 with jemalloc are available.
-
 ## Usage
 
 Pull it directly from the quay.io registry:
 
 ```sh
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-slim
 ```
 
 Or use as base image in your `Dockerfile`:
@@ -26,7 +22,25 @@ Or use as base image in your `Dockerfile`:
 ```docker
 ARG RUBY_VERSION=2.7.0-jemalloc
 
-FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-stretch-slim
+FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-slim
+```
+
+## Flavors
+
+Ruby 2.6.5 and 2.7.0 with jemalloc are available. Images are built on either Debian 9 (stretch) or 10 (buster):
+
+```sh
+# 2.7:
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-stretch
+
+# 2.6:
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-stretch
 ```
 
 ## Details
