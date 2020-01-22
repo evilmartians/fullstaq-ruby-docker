@@ -27,7 +27,7 @@ FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-slim
 
 ## Flavors
 
-Ruby 2.6.5 and 2.7.0 with jemalloc are available. Images are built on either Debian 9 (stretch) or 10 (buster):
+Ruby 2.6.5 and 2.7.0 with jemalloc and malloctrim are available. Images are built on either Debian 9 (stretch) or 10 (buster):
 
 ```sh
 # 2.7:
@@ -35,12 +35,20 @@ docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-buster
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-stretch-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-stretch
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-stretch
 
 # 2.6:
 docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-buster
 docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-stretch-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-stretch
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-stretch
 ```
 
 ## Details
