@@ -14,41 +14,41 @@ These images are intended to be used while [Fullstaq] and [Hongli Lai] haven't b
 Pull it directly from the quay.io registry:
 
 ```sh
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-jemalloc-slim
 ```
 
 Or use as base image in your `Dockerfile`:
 
 ```docker
-ARG RUBY_VERSION=2.7.0-jemalloc
+ARG RUBY_VERSION=2.7.1-jemalloc
 
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-slim
 ```
 
 ## Flavors
 
-Ruby 2.6.5 and 2.7.0 with jemalloc and malloctrim are available. Images are built on either Debian 9 (stretch) or 10 (buster):
+Ruby 2.6.6 and 2.7.1 with jemalloc and malloctrim are available. Images are built on either Debian 9 (stretch) or 10 (buster):
 
 ```sh
 # 2.7:
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-buster-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-jemalloc-stretch
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-buster-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.0-malloctrim-stretch
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-jemalloc-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-jemalloc-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-jemalloc-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-jemalloc-stretch
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-malloctrim-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-malloctrim-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-malloctrim-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.7.1-malloctrim-stretch
 
 # 2.6:
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-buster-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-jemalloc-stretch
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-buster-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.6.5-malloctrim-stretch
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-jemalloc-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-jemalloc-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-jemalloc-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-jemalloc-stretch
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-malloctrim-buster-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-malloctrim-buster
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-malloctrim-stretch-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:2.6.6-malloctrim-stretch
 ```
 
 ## Details

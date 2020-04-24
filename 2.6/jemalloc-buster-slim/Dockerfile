@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ARG RUBY_VERSION=2.6.5-jemalloc
+ARG RUBY_VERSION=2.6.6-jemalloc
 
 # RUN with pipe recommendation: https://github.com/hadolint/hadolint/wiki/DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
