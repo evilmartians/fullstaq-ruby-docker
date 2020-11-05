@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ARG RUBY_VERSION=2.7.1-malloctrim
+ARG RUBY_VERSION=2.7.2-malloctrim
 
 # RUN with pipe recommendation: https://github.com/hadolint/hadolint/wiki/DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
