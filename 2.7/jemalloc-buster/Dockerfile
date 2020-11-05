@@ -11,7 +11,7 @@ RUN apt-get update -q \
       gnupg \
       apt-transport-https \
       ca-certificates \
-    && curl -SLf https://raw.githubusercontent.com/fullstaq-labs/fullstaq-ruby-server-edition/master/fullstaq-ruby.asc | apt-key add - \
+    && curl -SLf https://raw.githubusercontent.com/fullstaq-labs/fullstaq-ruby-server-edition/main/fullstaq-ruby.asc | apt-key add - \
     && echo "deb https://apt.fullstaqruby.org debian-10 main" > /etc/apt/sources.list.d/fullstaq-ruby.list \
     && apt-get update -q \
     && apt-get install --assume-yes -q --no-install-recommends fullstaq-ruby-${RUBY_VERSION} \
