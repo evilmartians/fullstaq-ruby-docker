@@ -1,4 +1,3 @@
-name: Build and push Docker images for all versions and variants of Ruby
 on:
   push:
     branches:
@@ -128,6 +127,7 @@ jobs:
             ${{ runner.os }}-buildx-dev-${{ matrix.debian-image }}
             ${{ runner.os }}-buildx-dev
       - name: Login to Quay.io
+        if:   github.event_name != 'pull_request'
         uses: docker/login-action@v1 
         with:
           registry: quay.io
