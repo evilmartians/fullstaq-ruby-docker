@@ -1,0 +1,153 @@
+name: Build and push Docker images for all versions and variants of Ruby
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [synchronize, opened]
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+
+          # 2.7.2 on Debian 10
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "buster"
+            debian-version: "10"
+            aliases:  |
+              quay.io/evl.ms/fullstaq-ruby:2.7.2-jemalloc
+              quay.io/evl.ms/fullstaq-ruby:2.7-jemalloc
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "buster-slim"
+            debian-version: "10"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:2.7.2-jemalloc-slim
+              quay.io/evl.ms/fullstaq-ruby:2.7-jemalloc-slim
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "buster"
+            debian-version: "10"
+            aliases:  |
+              quay.io/evl.ms/fullstaq-ruby:2.7.2-malloctrim
+              quay.io/evl.ms/fullstaq-ruby:2.7-malloctrim
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "buster-slim"
+            debian-version: "10"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:2.7.2-malloctrim-slim
+              quay.io/evl.ms/fullstaq-ruby:2.7-malloctrim-slim
+
+          # 2.7.2 on Debian 9
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "stretch"
+            debian-version: "9"
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "stretch-slim"
+            debian-version: "9"
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "stretch"
+            debian-version: "9"
+          - ruby-version:   "2.7.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "stretch-slim"
+            debian-version: "9"
+
+          # 2.6.6 on Debian 10
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "jemalloc"
+            debian-image:   "buster"
+            debian-version: "10"
+            aliases:  |
+              quay.io/evl.ms/fullstaq-ruby:2.6.6-jemalloc
+              quay.io/evl.ms/fullstaq-ruby:2.6-jemalloc
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "jemalloc"
+            debian-image:   "buster-slim"
+            debian-version: "10"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:2.6.6-jemalloc-slim
+              quay.io/evl.ms/fullstaq-ruby:2.6-jemalloc-slim
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "malloctrim"
+            debian-image:   "buster"
+            debian-version: "10"
+            aliases:  |
+              quay.io/evl.ms/fullstaq-ruby:2.6.6-malloctrim
+              quay.io/evl.ms/fullstaq-ruby:2.6-malloctrim
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "malloctrim"
+            debian-image:   "buster-slim"
+            debian-version: "10"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:2.6.6-malloctrim-slim
+              quay.io/evl.ms/fullstaq-ruby:2.6-malloctrim-slim
+
+          # 2.6.6 on Debian 9
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "jemalloc"
+            debian-image:   "stretch"
+            debian-version: "9"
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "jemalloc"
+            debian-image:   "stretch-slim"
+            debian-version: "9"
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "malloctrim"
+            debian-image:   "stretch"
+            debian-version: "9"
+          - ruby-version:   "2.6.6"
+            ruby-variant:   "malloctrim"
+            debian-image:   "stretch-slim"
+            debian-version: "9"
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          install: true
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-dev-${{ matrix.debian-image }}-${{ matrix.ruby-version }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-dev-${{ matrix.debian-image }}-${{ matrix.ruby-version }}
+            ${{ runner.os }}-buildx-dev-${{ matrix.debian-image }}
+            ${{ runner.os }}-buildx-dev
+      - name: Login to Quay.io
+        uses: docker/login-action@v1 
+        with:
+          registry: quay.io
+          username: ${{ secrets.QUAY_USERNAME }}
+          password: ${{ secrets.QUAY_PASSWORD }} # Get it at Settings → CLI Password
+      - name: Build Docker image
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          pull: true
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: |
+            quay.io/evl.ms/fullstaq-ruby:${{ matrix.ruby-version }}-${{ matrix.ruby-variant }}-${{ matrix.debian-image }}
+            ${{ matrix.aliases }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
+          build-args: |
+            RUBY_VERSION=${{ matrix.ruby-version }}
+            RUBY_VARIANT=${{ matrix.ruby-variant }}
+            DEBIAN_IMAGE=${{ matrix.debian-image }}
+            DEBIAN_VERSION=${{ matrix.debian-version }}
