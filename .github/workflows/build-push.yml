@@ -6,6 +6,8 @@ on:
       - master
   pull_request:
     types: [synchronize, opened]
+  schedule:
+    - cron: '54 07 12 * *' # on 12th day of every month at 07:54
 
 jobs:
   build-push:
