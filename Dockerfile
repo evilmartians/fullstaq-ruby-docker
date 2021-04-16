@@ -21,7 +21,8 @@ RUN apt-get update -q \
     && apt-get install --assume-yes -q --no-install-recommends fullstaq-ruby-${RUBY_VERSION}-${RUBY_VARIANT} \
     && apt-get autoremove --assume-yes \
     && rm -rf /var/lib/apt/lists \
-    && rm -fr /var/cache/apt
+    && rm -fr /var/cache/apt \
+    && rm /etc/apt/sources.list.d/fullstaq-ruby.list
 
 ENV GEM_HOME /usr/local/bundle
 ENV BUNDLE_PATH="$GEM_HOME" \
