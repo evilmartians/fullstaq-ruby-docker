@@ -17,6 +17,24 @@ jobs:
       matrix:
         include:
 
+          # 3.0.2 on Debian 11
+          - ruby-version:   "3.0.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bullseye"
+            debian-version: "11"
+          - ruby-version:   "3.0.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bullseye-slim"
+            debian-version: "11"
+          - ruby-version:   "3.0.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bullseye"
+            debian-version: "11"
+          - ruby-version:   "3.0.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bullseye-slim"
+            debian-version: "11"
+
           # 3.0.2 on Debian 10
           - ruby-version:   "3.0.2"
             ruby-variant:   "jemalloc"
@@ -65,6 +83,24 @@ jobs:
             debian-image:   "stretch-slim"
             debian-version: "9"
 
+          # 2.7.4 on Debian 11
+          - ruby-version:   "2.7.4"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bullseye"
+            debian-version: "11"
+          - ruby-version:   "2.7.4"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bullseye-slim"
+            debian-version: "11"
+          - ruby-version:   "2.7.4"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bullseye"
+            debian-version: "11"
+          - ruby-version:   "2.7.4"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bullseye-slim"
+            debian-version: "11"
+
           # 2.7.4 on Debian 10
           - ruby-version:   "2.7.4"
             ruby-variant:   "jemalloc"
@@ -112,6 +148,24 @@ jobs:
             ruby-variant:   "malloctrim"
             debian-image:   "stretch-slim"
             debian-version: "9"
+
+          # 2.6.8 on Debian 11
+          - ruby-version:   "2.6.8"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bullseye"
+            debian-version: "11"
+          - ruby-version:   "2.6.8"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bullseye-slim"
+            debian-version: "11"
+          - ruby-version:   "2.6.8"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bullseye"
+            debian-version: "11"
+          - ruby-version:   "2.6.8"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bullseye-slim"
+            debian-version: "11"
 
           # 2.6.8 on Debian 10
           - ruby-version:   "2.6.8"
