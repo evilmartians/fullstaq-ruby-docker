@@ -90,10 +90,10 @@ docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-stretch
 Latest patch versions for Ruby 3.2 on Debian 11 (bullseye) are also aliased with shortened tags including major and minor versions only: `3.2.2-jemalloc-bullseye → 3.2-jemalloc`
 
 ```sh
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc-slim   # Same as quay.io/evl.ms/fullstaq-ruby:3.2.3-jemalloc-bullseye-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc        # Same as quay.io/evl.ms/fullstaq-ruby:3.2.3-jemalloc-bullseye
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim-slim # Same as quay.io/evl.ms/fullstaq-ruby:3.2.3-malloctrim-bullseye-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim      # Same as quay.io/evl.ms/fullstaq-ruby:3.2.3-malloctrim-bullseye
+docker pull quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc-slim   # Same as quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-bullseye-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc        # Same as quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-bullseye
+docker pull quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim-slim # Same as quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-bullseye-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim      # Same as quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-bullseye
 ```
 
 For Ruby 3.0 and older, short aliases for latest patch versions are made against Debian 10 (buster): `3.0.6-jemalloc-buster → 3.0-jemalloc`
