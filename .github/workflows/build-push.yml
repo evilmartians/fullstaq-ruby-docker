@@ -17,266 +17,266 @@ jobs:
       matrix:
         include:
 
-          # 3.2.1 on Debian 11
-          - ruby-version:   "3.2.1"
+          # 3.2.2 on Debian 11
+          - ruby-version:   "3.2.2"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye"
             debian-version: "11"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:3.2.1-jemalloc
+              quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc
               quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye-slim"
             debian-version: "11"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.2.1-jemalloc-slim
+              quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-slim
               quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc-slim
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye"
             debian-version: "11"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:3.2.1-malloctrim
+              quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim
               quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye-slim"
             debian-version: "11"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.2.1-malloctrim-slim
+              quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim-slim
 
-          # 3.2.1 on Debian 10
-          - ruby-version:   "3.2.1"
+          # 3.2.2 on Debian 10
+          - ruby-version:   "3.2.2"
             ruby-variant:   "jemalloc"
             debian-image:   "buster"
             debian-version: "10"
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "jemalloc"
             debian-image:   "buster-slim"
             debian-version: "10"
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "malloctrim"
             debian-image:   "buster"
             debian-version: "10"
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "malloctrim"
             debian-image:   "buster-slim"
             debian-version: "10"
 
-          # 3.2.1 on Debian 9
-          - ruby-version:   "3.2.1"
+          # 3.2.2 on Debian 9
+          - ruby-version:   "3.2.2"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch-slim"
             debian-version: "9"
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "3.2.1"
+          - ruby-version:   "3.2.2"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch-slim"
             debian-version: "9"
 
-          # 3.1.3 on Debian 11
-          - ruby-version:   "3.1.3"
+          # 3.1.4 on Debian 11
+          - ruby-version:   "3.1.4"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye"
             debian-version: "11"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:3.1.3-jemalloc
+              quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc
               quay.io/evl.ms/fullstaq-ruby:3.1-jemalloc
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye-slim"
             debian-version: "11"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.1.3-jemalloc-slim
+              quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc-slim
               quay.io/evl.ms/fullstaq-ruby:3.1-jemalloc-slim
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye"
             debian-version: "11"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:3.1.3-malloctrim
+              quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim
               quay.io/evl.ms/fullstaq-ruby:3.1-malloctrim
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye-slim"
             debian-version: "11"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.1.3-malloctrim-slim
+              quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:3.1-malloctrim-slim
 
-          # 3.1.3 on Debian 10
-          - ruby-version:   "3.1.3"
+          # 3.1.4 on Debian 10
+          - ruby-version:   "3.1.4"
             ruby-variant:   "jemalloc"
             debian-image:   "buster"
             debian-version: "10"
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "jemalloc"
             debian-image:   "buster-slim"
             debian-version: "10"
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "malloctrim"
             debian-image:   "buster"
             debian-version: "10"
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "malloctrim"
             debian-image:   "buster-slim"
             debian-version: "10"
 
-          # 3.1.3 on Debian 9
-          - ruby-version:   "3.1.3"
+          # 3.1.4 on Debian 9
+          - ruby-version:   "3.1.4"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch-slim"
             debian-version: "9"
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "3.1.3"
+          - ruby-version:   "3.1.4"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch-slim"
             debian-version: "9"
 
-          # 3.0.5 on Debian 11
-          - ruby-version:   "3.0.5"
+          # 3.0.6 on Debian 11
+          - ruby-version:   "3.0.6"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye"
             debian-version: "11"
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye-slim"
             debian-version: "11"
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye"
             debian-version: "11"
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye-slim"
             debian-version: "11"
 
-          # 3.0.5 on Debian 10
-          - ruby-version:   "3.0.5"
+          # 3.0.6 on Debian 10
+          - ruby-version:   "3.0.6"
             ruby-variant:   "jemalloc"
             debian-image:   "buster"
             debian-version: "10"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:3.0.5-jemalloc
+              quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc
               quay.io/evl.ms/fullstaq-ruby:3.0-jemalloc
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "jemalloc"
             debian-image:   "buster-slim"
             debian-version: "10"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.0.5-jemalloc-slim
+              quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc-slim
               quay.io/evl.ms/fullstaq-ruby:3.0-jemalloc-slim
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "malloctrim"
             debian-image:   "buster"
             debian-version: "10"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:3.0.5-malloctrim
+              quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim
               quay.io/evl.ms/fullstaq-ruby:3.0-malloctrim
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "malloctrim"
             debian-image:   "buster-slim"
             debian-version: "10"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.0.5-malloctrim-slim
+              quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:3.0-malloctrim-slim
 
-          # 3.0.5 on Debian 9
-          - ruby-version:   "3.0.5"
+          # 3.0.6 on Debian 9
+          - ruby-version:   "3.0.6"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch-slim"
             debian-version: "9"
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "3.0.5"
+          - ruby-version:   "3.0.6"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch-slim"
             debian-version: "9"
 
-          # 2.7.7 on Debian 11
-          - ruby-version:   "2.7.7"
+          # 2.7.8 on Debian 11
+          - ruby-version:   "2.7.8"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye"
             debian-version: "11"
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye-slim"
             debian-version: "11"
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye"
             debian-version: "11"
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye-slim"
             debian-version: "11"
 
-          # 2.7.7 on Debian 10
-          - ruby-version:   "2.7.7"
+          # 2.7.8 on Debian 10
+          - ruby-version:   "2.7.8"
             ruby-variant:   "jemalloc"
             debian-image:   "buster"
             debian-version: "10"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:2.7.7-jemalloc
+              quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc
               quay.io/evl.ms/fullstaq-ruby:2.7-jemalloc
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "jemalloc"
             debian-image:   "buster-slim"
             debian-version: "10"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:2.7.7-jemalloc-slim
+              quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-slim
               quay.io/evl.ms/fullstaq-ruby:2.7-jemalloc-slim
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "malloctrim"
             debian-image:   "buster"
             debian-version: "10"
             aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:2.7.7-malloctrim
+              quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim
               quay.io/evl.ms/fullstaq-ruby:2.7-malloctrim
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "malloctrim"
             debian-image:   "buster-slim"
             debian-version: "10"
             aliases: |
-              quay.io/evl.ms/fullstaq-ruby:2.7.7-malloctrim-slim
+              quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:2.7-malloctrim-slim
 
-          # 2.7.7 on Debian 9
-          - ruby-version:   "2.7.7"
+          # 2.7.8 on Debian 9
+          - ruby-version:   "2.7.8"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "jemalloc"
             debian-image:   "stretch-slim"
             debian-version: "9"
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch"
             debian-version: "9"
-          - ruby-version:   "2.7.7"
+          - ruby-version:   "2.7.8"
             ruby-variant:   "malloctrim"
             debian-image:   "stretch-slim"
             debian-version: "9"
