@@ -32,6 +32,7 @@ ENV BUNDLE_PATH="$GEM_HOME" \
     LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # path recommendation: https://github.com/bundler/bundler/pull/6469#issuecomment-383235438
+RUN echo "PATH=$GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH" >> /etc/profile.d/fullstaq-ruby.sh
 ENV PATH $GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH
 
 CMD [ "irb" ]

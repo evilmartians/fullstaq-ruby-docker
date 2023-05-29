@@ -87,16 +87,6 @@ For Ruby 3.0 and older, short aliases for latest patch versions are made against
 
 Ruby is installed from official APT package repository. Rbenv isn't used.
 
-## Caveats
-
-Bash login shell `bash -l -c 'command'` resets `$PATH` to default. It is not clear why it happens there, because in official Ruby image it works and this image is based on the same `debian:stretch-slim` base image.
-
-That may hurt you if you're using `whenever` gem which wraps every command in Bash login shell by default. To remove this wrapping place following to the top of your `config/schedule.rb`:
-
-```ruby
-# config/schedule.rb
-set :job_template, nil
-```
 
 [Fullstaq Ruby]: https://fullstaqruby.org/ "Ruby, optimized for production"
 [Hongli Lai]: https://www.joyfulbikeshedding.com/
