@@ -27,7 +27,7 @@ FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-slim
 
 ## Flavors
 
-Ruby 3.2.2, 3.1.4, 3.0.6, and 2.7.8 with jemalloc and malloctrim are available. Images are built on top of Debian 9 (stretch), 10 (buster), and 11 (bullseye):
+Ruby 3.2.2, 3.1.4, 3.0.6, and 2.7.8 with jemalloc and malloctrim are available. Images are built on top of Debian 10 (buster) and 11 (bullseye):
 
 ```sh
 # 3.2:
@@ -35,56 +35,40 @@ docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-jemalloc-stretch
 docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.2.2-malloctrim-stretch
 
 # 3.1:
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-jemalloc-stretch
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.1.4-malloctrim-stretch
 
 # 3.0:
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-jemalloc-stretch
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-stretch
 
 # 2.7:
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-stretch
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-bullseye-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-bullseye
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-buster
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-stretch-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-stretch
 ```
 
 Latest patch versions for Ruby 3.2 on Debian 11 (bullseye) are also aliased with shortened tags including major and minor versions only: `3.2.2-jemalloc-bullseye → 3.2-jemalloc`
