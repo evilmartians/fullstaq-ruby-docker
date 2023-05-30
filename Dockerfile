@@ -33,5 +33,7 @@ ENV BUNDLE_PATH="$GEM_HOME" \
 
 # path recommendation: https://github.com/bundler/bundler/pull/6469#issuecomment-383235438
 ENV PATH $GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH
+# Make login shell (bash -l) to have the same path as regular one.
+RUN echo 'PATH=$GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH' >> /etc/profile.d/fullstaq-ruby.sh
 
 CMD [ "irb" ]
