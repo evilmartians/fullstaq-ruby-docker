@@ -17,6 +17,32 @@ jobs:
       matrix:
         include:
 
+          # 3.2.2 on Debian 12
+          - ruby-version:   "3.2.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bookworm"
+            debian-version: "12"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc-bookworm
+          - ruby-version:   "3.2.2"
+            ruby-variant:   "jemalloc"
+            debian-image:   "bookworm-slim"
+            debian-version: "12"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.2-jemalloc-bookworm-slim
+          - ruby-version:   "3.2.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bookworm"
+            debian-version: "12"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim-bookworm
+          - ruby-version:   "3.2.2"
+            ruby-variant:   "malloctrim"
+            debian-image:   "bookworm-slim"
+            debian-version: "12"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim-bookworm-slim
+
           # 3.2.2 on Debian 11
           - ruby-version:   "3.2.2"
             ruby-variant:   "jemalloc"
