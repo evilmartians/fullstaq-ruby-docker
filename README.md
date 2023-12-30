@@ -88,16 +88,18 @@ docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-buster-slim
 docker pull quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-buster
 ```
 
-Latest patch versions for Ruby 3.3 on Debian 11 (bullseye) are also aliased with shortened tags including major and minor versions only: `3.3.0-jemalloc-bullseye → 3.3-jemalloc`
+Latest patch versions for Ruby 3.3 on Debian 12 (bookworm) are also aliased with shortened tags including major and minor versions only: `3.3.0-jemalloc-bookworm → 3.3-jemalloc`
 
 ```sh
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc-slim   # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-jemalloc-bullseye-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc        # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-jemalloc-bullseye
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3-malloctrim-slim # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-malloctrim-bullseye-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3-malloctrim      # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-malloctrim-bullseye
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc-slim   # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-jemalloc-bookworm-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc        # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-jemalloc-bookworm
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3-malloctrim-slim # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-malloctrim-bookworm-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3-malloctrim      # Same as quay.io/evl.ms/fullstaq-ruby:3.3.0-malloctrim-bookworm
 ```
 
-For Ruby 3.0 and older, short aliases for latest patch versions are made against Debian 10 (buster): `3.0.6-jemalloc-buster → 3.0-jemalloc`
+For Ruby 3.2 and 3.1, short aliases for latest patch versions are made against Debian 11 (bullseye): `3.2.2-jemalloc-bullseye → 3.2-jemalloc`
+
+For Ruby 3.0 and 2.7, short aliases for latest patch versions are made against Debian 10 (buster): `3.0.6-jemalloc-buster → 3.0-jemalloc`
 
 
 ## Details
