@@ -265,54 +265,6 @@ jobs:
               quay.io/evl.ms/fullstaq-ruby:3.0.6-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:3.0-malloctrim-slim
 
-          # 2.7.8 on Debian 11
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "bullseye"
-            debian-version: "11"
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "bullseye-slim"
-            debian-version: "11"
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "bullseye"
-            debian-version: "11"
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "bullseye-slim"
-            debian-version: "11"
-
-          # 2.7.8 on Debian 10
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster"
-            debian-version: "10"
-            aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc
-              quay.io/evl.ms/fullstaq-ruby:2.7-jemalloc
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-            aliases: |
-              quay.io/evl.ms/fullstaq-ruby:2.7.8-jemalloc-slim
-              quay.io/evl.ms/fullstaq-ruby:2.7-jemalloc-slim
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster"
-            debian-version: "10"
-            aliases:  |
-              quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim
-              quay.io/evl.ms/fullstaq-ruby:2.7-malloctrim
-          - ruby-version:   "2.7.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-            aliases: |
-              quay.io/evl.ms/fullstaq-ruby:2.7.8-malloctrim-slim
-              quay.io/evl.ms/fullstaq-ruby:2.7-malloctrim-slim
-
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
