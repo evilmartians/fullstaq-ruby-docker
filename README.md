@@ -96,6 +96,15 @@ For Ruby 3.0, short aliases for latest patch versions are made against Debian 10
 
 Ruby is installed from official APT package repository. Rbenv isn't used.
 
+## Bumping versions
+
+After a new version of Ruby was released:
+
+ 1. Check pull requests at the https://github.com/fullstaq-ruby/server-edition/ repository and ensure that packages for the target version has been build and published (pull request adding this has been merged).
+
+ 2. Execute `make bump VERSION=X.Y.Z` (specify full version in `X.Y.Z`), it will replace previous patch version in both Github Action and README files.
+
+ 3. Commit and push changed `README.md` and `.github/workflows/build-push.yml`. Once they will reach main branch, new images will be pushed to the registry automatically.
 
 [Fullstaq Ruby]: https://fullstaqruby.org/ "Ruby, optimized for production"
 [Hongli Lai]: https://www.joyfulbikeshedding.com/
