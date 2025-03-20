@@ -1,4 +1,4 @@
-ARG DEBIAN_IMAGE
+ARG DEBIAN_IMAGE=bookworm
 
 FROM debian:${DEBIAN_IMAGE}
 
@@ -24,15 +24,15 @@ RUN apt-get update -q \
     && rm -fr /var/cache/apt \
     && rm /etc/apt/sources.list.d/fullstaq-ruby.list
 
-ENV GEM_HOME /usr/local/bundle
-ENV BUNDLE_PATH="$GEM_HOME" \
+ENV GEM_HOME=/usr/local/bundle \
+    BUNDLE_PATH=/usr/local/bundle \
     BUNDLE_SILENCE_ROOT_WARNING=1 \
-    BUNDLE_APP_CONFIG="$GEM_HOME" \
+    BUNDLE_APP_CONFIG=/usr/local/bundle \
     RUBY_VERSION=${RUBY_VERSION}-${RUBY_VARIANT} \
     LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 # path recommendation: https://github.com/bundler/bundler/pull/6469#issuecomment-383235438
-ENV PATH $GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH
+ENV PATH=$GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH
 # Make login shell (bash -l) to have the same path as regular one.
 RUN echo 'PATH=$GEM_HOME/bin:$BUNDLE_PATH/gems/bin:/usr/lib/fullstaq-ruby/versions/${RUBY_VERSION}/bin:$PATH' >> /etc/profile.d/fullstaq-ruby.sh
 
