@@ -77,24 +77,6 @@ jobs:
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-bullseye-slim
 
-          # 3.4.4 on Debian 10
-          - ruby-version:   "3.4.4"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.4.4"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-          - ruby-version:   "3.4.4"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.4.4"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-
           # 3.3.8 on Debian 12
           - ruby-version:   "3.3.8"
             ruby-variant:   "jemalloc"
@@ -155,24 +137,6 @@ jobs:
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.3-malloctrim-bullseye-slim
 
-          # 3.3.8 on Debian 10
-          - ruby-version:   "3.3.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.3.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-          - ruby-version:   "3.3.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.3.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-
           # 3.2.8 on Debian 12
           - ruby-version:   "3.2.8"
             ruby-variant:   "jemalloc"
@@ -229,24 +193,6 @@ jobs:
               quay.io/evl.ms/fullstaq-ruby:3.2.8-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:3.2-malloctrim-slim
 
-          # 3.2.8 on Debian 10
-          - ruby-version:   "3.2.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.2.8"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-          - ruby-version:   "3.2.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.2.8"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-
           # 3.1.7 on Debian 11
           - ruby-version:   "3.1.7"
             ruby-variant:   "jemalloc"
@@ -276,24 +222,6 @@ jobs:
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.1.7-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:3.1-malloctrim-slim
-
-          # 3.1.7 on Debian 10
-          - ruby-version:   "3.1.7"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.1.7"
-            ruby-variant:   "jemalloc"
-            debian-image:   "buster-slim"
-            debian-version: "10"
-          - ruby-version:   "3.1.7"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster"
-            debian-version: "10"
-          - ruby-version:   "3.1.7"
-            ruby-variant:   "malloctrim"
-            debian-image:   "buster-slim"
-            debian-version: "10"
 
     steps:
       - name: Check out the repo
