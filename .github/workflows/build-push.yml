@@ -17,6 +17,32 @@ jobs:
       matrix:
         include:
 
+          # 3.4.5 on Debian 13
+          - ruby-version:   "3.4.5"
+            ruby-variant:   "jemalloc"
+            debian-image:   "trixie"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-trixie
+          - ruby-version:   "3.4.5"
+            ruby-variant:   "jemalloc"
+            debian-image:   "trixie-slim"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-trixie-slim
+          - ruby-version:   "3.4.5"
+            ruby-variant:   "malloctrim"
+            debian-image:   "trixie"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-trixie
+          - ruby-version:   "3.4.5"
+            ruby-variant:   "malloctrim"
+            debian-image:   "trixie-slim"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-trixie-slim
+
           # 3.4.5 on Debian 12
           - ruby-version:   "3.4.5"
             ruby-variant:   "jemalloc"
@@ -76,6 +102,32 @@ jobs:
             debian-version: "11"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-bullseye-slim
+
+          # 3.3.8 on Debian 13
+          - ruby-version:   "3.3.8"
+            ruby-variant:   "jemalloc"
+            debian-image:   "trixie"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc-trixie
+          - ruby-version:   "3.3.8"
+            ruby-variant:   "jemalloc"
+            debian-image:   "trixie-slim"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc-trixie-slim
+          - ruby-version:   "3.3.8"
+            ruby-variant:   "malloctrim"
+            debian-image:   "trixie"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.3-malloctrim-trixie
+          - ruby-version:   "3.3.8"
+            ruby-variant:   "malloctrim"
+            debian-image:   "trixie-slim"
+            debian-version: "13"
+            aliases: |
+              quay.io/evl.ms/fullstaq-ruby:3.3-malloctrim-trixie-slim
 
           # 3.3.8 on Debian 12
           - ruby-version:   "3.3.8"
