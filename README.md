@@ -26,7 +26,7 @@ FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-slim
 
 ## Flavors
 
-Ruby 3.4.5, 3.3.8, 3.2.8 and 3.1.7 with jemalloc and malloctrim are available. Images are built on top of Debian 11 (bullseye), 12 (bookworm), 13 (trixie), also Ruby 3.2 are build on top of Debian 12 (bookworm):
+Ruby 3.4.5, 3.3.8, 3.2.8, and 3.1.7 with jemalloc and malloctrim are available. Images are built on top of Debian 11 (bullseye), 12 (bookworm), 13 (trixie):
 
 ```sh
 # 3.4:
