@@ -17,86 +17,86 @@ jobs:
       matrix:
         include:
 
-          # 3.4.6 on Debian 13
-          - ruby-version:   "3.4.6"
+          # 3.4.7 on Debian 13
+          - ruby-version:   "3.4.7"
             ruby-variant:   "jemalloc"
             debian-image:   "trixie"
             debian-version: "13"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-trixie
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "jemalloc"
             debian-image:   "trixie-slim"
             debian-version: "13"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-trixie-slim
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "malloctrim"
             debian-image:   "trixie"
             debian-version: "13"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-trixie
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "malloctrim"
             debian-image:   "trixie-slim"
             debian-version: "13"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-trixie-slim
 
-          # 3.4.6 on Debian 12
-          - ruby-version:   "3.4.6"
+          # 3.4.7 on Debian 12
+          - ruby-version:   "3.4.7"
             ruby-variant:   "jemalloc"
             debian-image:   "bookworm"
             debian-version: "12"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc
-              quay.io/evl.ms/fullstaq-ruby:3.4.6-jemalloc
+              quay.io/evl.ms/fullstaq-ruby:3.4.7-jemalloc
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-bookworm
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "jemalloc"
             debian-image:   "bookworm-slim"
             debian-version: "12"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-slim
-              quay.io/evl.ms/fullstaq-ruby:3.4.6-jemalloc-slim
+              quay.io/evl.ms/fullstaq-ruby:3.4.7-jemalloc-slim
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-bookworm-slim
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "malloctrim"
             debian-image:   "bookworm"
             debian-version: "12"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim
-              quay.io/evl.ms/fullstaq-ruby:3.4.6-malloctrim
+              quay.io/evl.ms/fullstaq-ruby:3.4.7-malloctrim
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-bookworm
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "malloctrim"
             debian-image:   "bookworm-slim"
             debian-version: "12"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-slim
-              quay.io/evl.ms/fullstaq-ruby:3.4.6-malloctrim-slim
+              quay.io/evl.ms/fullstaq-ruby:3.4.7-malloctrim-slim
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-bookworm-slim
 
-          # 3.4.6 on Debian 11
-          - ruby-version:   "3.4.6"
+          # 3.4.7 on Debian 11
+          - ruby-version:   "3.4.7"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye"
             debian-version: "11"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-bullseye
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "jemalloc"
             debian-image:   "bullseye-slim"
             debian-version: "11"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-bullseye-slim
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye"
             debian-version: "11"
             aliases: |
               quay.io/evl.ms/fullstaq-ruby:3.4-malloctrim-bullseye
-          - ruby-version:   "3.4.6"
+          - ruby-version:   "3.4.7"
             ruby-variant:   "malloctrim"
             debian-image:   "bullseye-slim"
             debian-version: "11"
