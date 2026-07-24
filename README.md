@@ -5,9 +5,7 @@ Fullstaq Ruby Docker images
 
 These images are intended to be used while [Fullstaq] and [Hongli Lai] haven't build their own.
 
-<a href="https://evilmartians.com/?utm_source=fullstaq-ruby-docker&utm_campaign=project_page">
-<img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54">
-</a>
+<img src="https://cdn.evilmartians.com/badges/logo-no-label.svg" alt="Evil Martians logo" width="22" height="16" /> <b>Fullstaq Ruby Docker images</b> are maintained by <b><a href="https://evilmartians.com/">Evil Martians</a></b>, an American design and engineering consultancy for <b>developer tools, AI, and cybersecurity startups</b>.
 
 ## Usage
 Pull it directly from the quay.io registry:
