@@ -17,40 +17,40 @@ docker pull quay.io/evl.ms/fullstaq-ruby:4.0-jemalloc-slim
 Or use as base image in your `Dockerfile`:
 
 ```docker
-ARG RUBY_VERSION=4.0.6-jemalloc
+ARG RUBY_VERSION=4.0.9-jemalloc
 
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-slim
 ```
 
 ## Flavors
 
-Ruby 4.0.6, 3.4.10 and 3.3.12 with jemalloc are available. Images are built on top of Debian 12 (bookworm) and 13 (trixie):
+Ruby 4.0.9, 3.4.12 and 3.3.13 with jemalloc are available. Images are built on top of Debian 12 (bookworm) and 13 (trixie):
 
 ```sh
 # 4.0:
-docker pull quay.io/evl.ms/fullstaq-ruby:4.0.6-jemalloc-trixie-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:4.0.6-jemalloc-trixie
-docker pull quay.io/evl.ms/fullstaq-ruby:4.0.6-jemalloc-bookworm-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:4.0.6-jemalloc-bookworm
+docker pull quay.io/evl.ms/fullstaq-ruby:4.0.9-jemalloc-trixie-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:4.0.9-jemalloc-trixie
+docker pull quay.io/evl.ms/fullstaq-ruby:4.0.9-jemalloc-bookworm-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:4.0.9-jemalloc-bookworm
 
 # 3.4:
-docker pull quay.io/evl.ms/fullstaq-ruby:3.4.10-jemalloc-trixie-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.4.10-jemalloc-trixie
-docker pull quay.io/evl.ms/fullstaq-ruby:3.4.10-jemalloc-bookworm-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.4.10-jemalloc-bookworm
+docker pull quay.io/evl.ms/fullstaq-ruby:3.4.12-jemalloc-trixie-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.4.12-jemalloc-trixie
+docker pull quay.io/evl.ms/fullstaq-ruby:3.4.12-jemalloc-bookworm-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.4.12-jemalloc-bookworm
 
 # 3.3:
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3.12-jemalloc-trixie-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3.12-jemalloc-trixie
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3.12-jemalloc-bookworm-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.3.12-jemalloc-bookworm
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3.13-jemalloc-trixie-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3.13-jemalloc-trixie
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3.13-jemalloc-bookworm-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.3.13-jemalloc-bookworm
 ```
 
-Latest patch versions for Ruby 3.4 on Debian 12 (bookworm) are also aliased with shortened tags including major and minor versions only: `3.4.10-jemalloc-bookworm → 3.4-jemalloc`
+Latest patch versions for Ruby 3.4 on Debian 12 (bookworm) are also aliased with shortened tags including major and minor versions only: `3.4.12-jemalloc-bookworm → 3.4-jemalloc`
 
 ```sh
-docker pull quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-slim   # Same as quay.io/evl.ms/fullstaq-ruby:3.4.10-jemalloc-bookworm-slim
-docker pull quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc        # Same as quay.io/evl.ms/fullstaq-ruby:3.4.10-jemalloc-bookworm
+docker pull quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-slim   # Same as quay.io/evl.ms/fullstaq-ruby:3.4.12-jemalloc-bookworm-slim
+docker pull quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc        # Same as quay.io/evl.ms/fullstaq-ruby:3.4.12-jemalloc-bookworm
 ```
 
 ## Details
