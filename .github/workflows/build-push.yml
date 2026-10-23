@@ -81,19 +81,6 @@ jobs:
               quay.io/evl.ms/fullstaq-ruby:3.4.10-jemalloc-slim
               quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-bookworm-slim
 
-          # 3.4.10 on Debian 11
-          - ruby-version:   "3.4.10"
-            ruby-variant:   "jemalloc"
-            debian-image:   "bullseye"
-            debian-version: "11"
-            aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-bullseye
-          - ruby-version:   "3.4.10"
-            ruby-variant:   "jemalloc"
-            debian-image:   "bullseye-slim"
-            debian-version: "11"
-            aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.4-jemalloc-bullseye-slim
 
           # 3.3.12 on Debian 13
           - ruby-version:   "3.3.12"
@@ -127,19 +114,6 @@ jobs:
               quay.io/evl.ms/fullstaq-ruby:3.3.12-jemalloc-slim
               quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc-bookworm-slim
 
-          # 3.3.12 on Debian 11
-          - ruby-version:   "3.3.12"
-            ruby-variant:   "jemalloc"
-            debian-image:   "bullseye"
-            debian-version: "11"
-            aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc-bullseye
-          - ruby-version:   "3.3.12"
-            ruby-variant:   "jemalloc"
-            debian-image:   "bullseye-slim"
-            debian-version: "11"
-            aliases: |
-              quay.io/evl.ms/fullstaq-ruby:3.3-jemalloc-bullseye-slim
 
     steps:
       - name: Check out the repo
